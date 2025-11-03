@@ -1,0 +1,30 @@
+[
+	{
+		"id": 0,
+		"name": "orange",
+		"cpu": 0,
+		"memory": 41619456,
+		"status": "online"
+	},
+	{
+		"id": 1,
+		"name": "orange",
+		"cpu": 0.2,
+		"memory": 41013248,
+		"status": "online"
+	},
+	{
+		"id": 2,
+		"name": "orange",
+		"cpu": 0.2,
+		"memory": 40787968,
+		"status": "online"
+	},
+	{
+		"id": 3,
+		"name": "orange",
+		"cpu": 0.2,
+		"memory": 40312832,
+		"status": "online"
+	}
+]

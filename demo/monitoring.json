@@ -1,0 +1,115 @@
+{
+	"os": {
+		"platform": "darwin",
+		"distro": "macOS",
+		"release": "13.7.4",
+		"arch": "x64",
+		"hostname": "192.168.5.89"
+	},
+	"cpu": {
+		"currentLoad": 42.42424242424242,
+		"currentLoadUser": 28.28282828282828,
+		"currentLoadSystem": 14.14141414141414,
+		"cores": 4,
+		"avgLoad": 1.41,
+		"cpus": [
+			{
+				"load": 74
+			},
+			{
+				"load": 14.14141414141414
+			},
+			{
+				"load": 66.66666666666666
+			},
+			{
+				"load": 14.285714285714285
+			}
+		]
+	},
+	"memory": {
+		"total": 8589934592,
+		"used": 8341872640,
+		"free": 248061952,
+		"available": 6271897600,
+		"usage": 97.11217880249023
+	},
+	"disk": [
+		{
+			"fs": "/dev/disk1s5s1",
+			"type": "APFS",
+			"size": 250685575168,
+			"used": 10326577152,
+			"available": 73084878848,
+			"use": 12.38,
+			"mount": "/",
+			"rw": false
+		},
+		{
+			"fs": "/dev/disk1s2",
+			"type": "APFS",
+			"size": 250685575168,
+			"used": 3735019520,
+			"available": 73084878848,
+			"use": 4.86,
+			"mount": "/System/Volumes/Preboot",
+			"rw": true
+		},
+		{
+			"fs": "/dev/disk1s7",
+			"type": "APFS",
+			"size": 250685575168,
+			"used": 3222339584,
+			"available": 73084878848,
+			"use": 4.22,
+			"mount": "/System/Volumes/VM",
+			"rw": true
+		},
+		{
+			"fs": "/dev/disk1s6",
+			"type": "HFS",
+			"size": 250685575168,
+			"used": 70057984,
+			"available": 73084878848,
+			"use": 0.1,
+			"mount": "/System/Volumes/Update",
+			"rw": true
+		},
+		{
+			"fs": "/dev/disk1s4",
+			"type": "APFS",
+			"size": 250685575168,
+			"used": 158721474560,
+			"available": 73084878848,
+			"use": 68.47,
+			"mount": "/System/Volumes/Data",
+			"rw": true
+		},
+		{
+			"fs": "/dev/disk1s1",
+			"type": "APFS",
+			"size": 250685575168,
+			"used": 234725376,
+			"available": 73084878848,
+			"use": 0.32,
+			"mount": "/Volumes/Macintosh HD - 数据",
+			"rw": true
+		},
+		{
+			"fs": "/dev/disk1s5",
+			"type": "HFS",
+			"size": 250685575168,
+			"used": 10326577152,
+			"available": 73084878848,
+			"use": 12.38,
+			"mount": "/System/Volumes/Update/mnt1",
+			"rw": true
+		}
+	],
+	"time": {
+		"current": 1762151746436,
+		"uptime": 55104,
+		"timezone": "CST+0800",
+		"timezoneName": "Asia/Shanghai"
+	}
+}
