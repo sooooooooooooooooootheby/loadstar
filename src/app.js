@@ -1,8 +1,10 @@
 const { Server } = require("socket.io");
 const { getInformation } = require("./monitoring.js");
 const { getPm2Info } = require("./pm2.js");
+const minimist = require("minimist");
 
-const SOCKETPORT = 3000;
+const argv = minimist(process.argv.slice(2));
+const SOCKETPORT = argv.port || 3000;
 
 const io = new Server(SOCKETPORT, {
 	cors: {
