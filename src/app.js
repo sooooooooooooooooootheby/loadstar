@@ -5,6 +5,9 @@ const minimist = require("minimist");
 
 const argv = minimist(process.argv.slice(2));
 const SOCKETPORT = argv.port || 3000;
+const SERVERTIME = argv.st || 1000;
+const PM2TIME = argv.pt || 6000;
+const TIMEOUT = argv.to || 600000;
 
 const io = new Server(SOCKETPORT, {
 	cors: {
@@ -19,15 +22,15 @@ io.on("connection", async (socket) => {
 
 	const intervalServer = setInterval(async () => {
 		socket.emit("server", await getInformation());
-	}, 1000);
+	}, SERVERTIME);
 	const intervalPm2 = setInterval(async () => {
 		socket.emit("pm2", await getPm2Info());
-	}, 6000);
+	}, PM2TIME);
 
 	const timeout = setTimeout(() => {
 		clearInterval(intervalServer);
 		clearInterval(intervalPm2);
-	}, 10 * 60 * 1000);
+	}, TIMEOUT);
 
 	socket.on("disconnect", () => {
 		clearInterval(intervalServer);
