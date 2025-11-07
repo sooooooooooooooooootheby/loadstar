@@ -16,7 +16,21 @@ const io = new Server(SOCKETPORT, {
 	path: "/",
 });
 
+console.clear();
+console.log(`server running at http://localhost:${SOCKETPORT}`);
+console.log(`test: "curl 'http://localhost:${SOCKETPORT}/socket.io/?EIO=4&transport=polling' -v"`);
+console.log(`
+- Server time: ${SERVERTIME / 1000}s,
+- Pm2 time: ${PM2TIME / 1000}s,
+- timeout: ${TIMEOUT / 1000}s,
+`);
+
+let userCount = 0;
+
 io.on("connection", async (socket) => {
+	userCount++;
+	console.log(`client <${socket.id}> join, The current number of connections is ${userCount}`);
+
 	io.emit("server", await getInformation());
 	io.emit("pm2", await getPm2Info());
 
@@ -33,12 +47,11 @@ io.on("connection", async (socket) => {
 	}, TIMEOUT);
 
 	socket.on("disconnect", () => {
+		userCount--;
+		console.log(`client <${socket.id}> disconnect, The current number of connections is ${userCount}`);
+
 		clearInterval(intervalServer);
 		clearInterval(intervalPm2);
 		clearTimeout(timeout);
 	});
 });
-
-console.clear();
-console.log(`server running at http://localhost:${SOCKETPORT}`);
-console.log(`test: "curl 'http://localhost:${SOCKETPORT}/socket.io/?EIO=4&transport=polling' -v"`);
